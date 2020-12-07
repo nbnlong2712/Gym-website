@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SideBar Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger .hamburger__inner").click(function(){
+			  $(".wrapper").toggleClass("active")
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="wrapper">
+  
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="hamburger__inner">
+         <div class="one"></div>
+         <div class="two"></div>
+         <div class="three"></div>
+       </div>
+    </div>
+    <div class="menu">
+      <div class="logo">
+        <a class="navbar-brand" href="#"><img src="Logo1.png" height="150px" ></a>
+      </div>
+      <div class="right_menu">
+        <ul >					
+          <li>
+            <a title="Login" href="#"><span class="fa fa-sign-in-alt"></span> Member Login</a>
+          </li>
+        <li><a title="Register Now" href="#"><span class="fa fa-user"></span> Register</a></li>
+        <li> <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form></li>                               
+    </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="main_container">
+      <div class="sidebar">
+          <div class="sidebar__inner">
+            <ul>
+              <li>
+                <a href="#" class="active">
+                  <span class="icon"><i class="fas fa-home"></i></span>
+                  <span class="title">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                  <span class="title">Workout</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fas fa-utensils"></i></span>
+                  <span class="title">Nutrion</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fas fa-clock"></i></span>
+                  <span class="title">Scheduler</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                  <span class="title">Shop</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="container">
+        <div class="box">
+          <h1>Register</h1>
+          <form>
+              <div class="inputBox">
+                  <label> <i class="fa fa-user" aria-hidden="true"></i> </label>
+                  <input class="fill" type="text" placeholder="Username" name="" required="">
+              </div>
+              <div class="inputBox">
+                  <label><i class="fa fa-lock" aria-hidden="true"></i></label>
+                  <input class="fill" type="password" placeholder="Password" name="" required="">
+              </div>
+              <div class="inputBox">
+               <label><i class="fas fa-mail-bulk" aria-hidden="true"></i></label>
+               <input class="fill" type="email" placeholder="Gmail" name="" required="">
+           </div>
+              <div>
+                  <input class="lg" type="submit"  name="" value="Sign up">
+              </div>
+          </form>
+      </div>
+      </div>
+    </div>	
+</body>
+</html>
