@@ -239,20 +239,6 @@ body{
     border-radius: 10px;
     letter-spacing: 1px;
   }
-  /**/
-  .sche-container
-  {
-    position: absolute;
-    top:65%;
-    left: 60%;
-    width: 60%;
-    transform: translate(-50%,-50%);
-    background: rgba(0,0,0,.8);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.5);
-    border-radius: 10px;
-    letter-spacing: 1px;
-  }
   
   .container1 h2
   {
