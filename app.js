@@ -20,6 +20,7 @@ app.use('/login/', require('./controllers/login.router'));
 app.use('/register/', require('./controllers/register.router'));
 app.use('/shopequipments/', require('./controllers/shopEquipments.router'))
 app.use('/shopCourses/', require('./controllers/shopCourses.router'))
+app.use('/scheduler/', require('./controllers/scheduler.router'))
 app.use(express.static('public'));
 
 const PORT = 3000;
