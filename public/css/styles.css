@@ -539,6 +539,10 @@ body{
   margin-bottom:65px ;
 }
 /*---------ANIMATION---------*/
+.container4 .can-chinh
+{
+  display: flex;
+}
 .container4 .legs-bd
 {
   transform-origin: 50% 50%;
@@ -626,4 +630,49 @@ body{
   transform: scale(1.03, 1.03) rotate(0.1deg);
   opacity: 1;
 }
-
+.container4 .ben-trai
+{
+  margin-top: 30px;
+  margin-left: 65px;
+}
+/*---Cardio---*/
+.container5
+{
+  position: absolute;
+    top:59%;
+    left: 60%;
+    width: 73%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.8);
+    /*box-sizing: border-box;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container5 h1
+{
+  color: red;
+  border-bottom: 1px solid #0062cc;
+  display: block;
+  background-color: transparent;
+  font-size: 26px;
+}
+.container5 .nav
+{
+  margin-left: 10px;
+  margin-right: 889px;
+}
+.container5 .nav .form-select
+{
+  text-align: center;
+  color: red;
+  margin-left: 10px;
+  margin-right: 889px;
+  border: 2px solid red;
+  background-color: rgba(0,0,0,.8);
+}
+.container5 .content
+{
+  margin-left: 280px;
+  margin-bottom: 5px;
+}
