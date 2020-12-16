@@ -360,7 +360,7 @@ body{
 .container2
 {
   position: absolute;
-    top:60%;
+    top:59%;
     left: 60%;
     width: 73%;
     transform: translate(-50%,-50%);
@@ -370,3 +370,260 @@ body{
     border-radius: 10px;
     letter-spacing: 1px;
 }
+/*---scheduler---*/
+.container3
+{
+  position: absolute;
+    top:59%;
+    left: 60%;
+    width: 73%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.8);
+    /*box-sizing: border-box;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container3 h1
+{
+  color: red;
+  border-bottom: 1px solid #0062cc;
+  display: block;
+  background-color: transparent;
+  font-size: 26px;
+}
+.container3 .nav
+{
+  margin-left: 10px;
+  margin-right: 889px;
+}
+.container3 .nav .form-select
+{
+  text-align: center;
+  color: red;
+  margin-left: 10px;
+  margin-right: 889px;
+  border: 2px solid red;
+  background-color: rgba(0,0,0,.8);
+}
+
+.container3 .content
+{
+  margin-left: 243px;
+  margin-bottom: 40px;
+}
+.container3 .content1
+{
+  margin-left: 215px;
+  margin-bottom: 35px;
+}
+.container3 #preview
+{
+  height: 400px;
+  width: 865px;
+}
+.container3 #preview
+{
+  height: 400px;
+  width: 865px;
+}
+.container3 .content1 #preview
+{
+  height: 420px;
+  width: 893px;
+}
+/* workout - container4 */
+.container4
+{
+  position: absolute;
+    top:59%;
+    left: 60%;
+    width: 73%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.8);
+    /*box-sizing: border-box;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container4 h1
+{
+  color: red;
+  border-bottom: 1px solid #0062cc;
+  display: block;
+  background-color: transparent;
+  font-size: 26px;
+}
+.container4 .ben-phai
+{
+  width: 300px;
+}
+.container4 .head-bd
+{  
+  height: 53px;
+  opacity: 0.8;
+}
+.container4 .chest-bd
+{  
+  height:  29px;
+  width: 107px;
+  opacity: 0.8;
+}
+.container4 .shoulder1-bd
+{  
+  height: 30px;
+  width: 40px;
+  opacity: 0.8;
+}
+.container4 .shoulder2-bd
+{  
+  height: 30px;
+  width: 40px;
+  opacity: 0.8;
+}
+.container4 .arm2-bd
+{  
+  height: 93px;
+  width: 72px;
+  opacity: 0.8;
+}
+.container4 .abs-bd
+{  
+  height: 93px;
+  width: 97px;
+  opacity: 0.8;
+}
+.container4 .arm1-bd
+{  
+  height: 93px;
+  width: 72px;
+  opacity: 0.8;
+}
+.container4 .legs-bd
+{
+  height: 234px;
+  opacity: 0.7;
+  opacity: 0.8;
+}
+/*------------------*/
+.container4 .head-bd
+{
+  margin-left: 145px;
+}
+.container4 .chest-bd
+{
+  margin-top: 1px;
+}
+.container4 .shoulder2-bd
+{
+  margin-left: 67px;
+}
+.container4 .shoulder1-bd
+{
+}
+.container4 .arm2-bd
+{
+  margin-left: 37px;
+}
+.container4 .abs-bd
+{
+  margin-left: 2px;
+}
+.container4 .arm1-bd
+{
+  margin-left: 2px;
+}
+.container4 .legs-bd
+{
+  margin-left: 102px;
+  margin-bottom:65px ;
+}
+/*---------ANIMATION---------*/
+.container4 .legs-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .legs-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .head-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .head-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .chest-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.1s linear;
+}
+.container4 .chest-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .shoulder1-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .shoulder1-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .shoulder2-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .shoulder2-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .arm1-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .arm1-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .arm2-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .arm2-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
+.container4 .abs-bd
+{
+  transform-origin: 50% 50%;
+  transition: transform 0.5s linear;
+}
+.container4 .abs-bd:hover{ 
+  cursor: pointer;   
+  transform: scale(1.03, 1.03) rotate(0.1deg);
+  opacity: 1;
+}
+
