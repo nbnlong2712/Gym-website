@@ -131,7 +131,7 @@ body{
   
   .main_container .sidebar ul li a .icon{
     margin-right: 15px;
-    font-size: 28px;
+    font-size: 20px;
   }
   
   .main_container .sidebar ul li a span{
@@ -675,4 +675,130 @@ body{
 {
   margin-left: 280px;
   margin-bottom: 5px;
+}
+/*-----------Post----------*/
+.container6
+{
+  position: absolute;
+    top:59%;
+    left: 60%;
+    width: 73%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.8);
+    /*box-sizing: border-box;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container6 h1
+{
+  color: red;
+  border-bottom: 1px solid #0062cc;
+  display: block;
+  background-color: transparent;
+  font-size: 26px;
+}
+.container6 .form-group
+{
+  margin-left: 43px;
+  margin-right: 60px;
+  margin-bottom: 50px;
+  display: flex;
+  color: red;
+}
+.container6 .fa-hand-point-right
+{
+  font-size: 32px;
+  margin-top: 4px;
+  margin-right: 15px;
+}
+.container6  label
+{
+  color: red;
+  font-size: 24px;
+  margin-left: 50px;
+}
+.container6 .btn-primary
+{
+  margin: 0px 0px 30px 400px;
+  width: 117px;
+}
+.container6 .btn-success
+{
+  margin: 0px 0px 30px 20px;
+  width: 117px;
+}
+.container6 .btn i
+{
+   font-size: 18px;
+}
+.container6 .iot 
+{
+  margin-bottom: 30px;
+}
+.container7
+{
+  position: absolute;
+    top:59%;
+    left: 60%;
+    width: 73%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.8);
+    /*box-sizing: border-box;*/
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+.container7 h1
+{
+  color: red;
+  border-bottom: 1px solid #0062cc;
+  display: block;
+  background-color: transparent;
+  font-size: 26px;
+}
+.container7 .form-group
+{
+  margin-left: 43px;
+  margin-right: 60px;
+  margin-bottom: 23px;
+  display: flex;
+  color: red;
+}
+.container7  label
+{
+  color: red;
+  font-size: 24px;
+  margin-left: 50px;
+}
+.container7 #topic-art
+{
+  margin-bottom: 10px;
+}
+.container7 .btn-primary
+{
+  margin: 0px 0px 6px 400px;
+  width: 117px;
+}
+.container7 .btn-success
+{
+  margin: 0px 0px 6px 20px;
+  width: 117px;
+}
+.container7 .btn i
+{
+   font-size: 18px;
+}
+.container7 .iot 
+{
+  margin-bottom: 30px;
+}
+.container7 select
+{
+  padding: 3px;
+}
+/*----------advertisement----------*/
+.container4 .d-block
+{
+  margin-bottom: 30px;
 }

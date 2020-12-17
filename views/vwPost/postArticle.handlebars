@@ -1,0 +1,53 @@
+<div class="container7">
+    
+   	<h1 class="text-center mt-4 mb-5">
+   		Post Article
+   	</h1>
+     
+    <div>
+      <form>
+        <label for="topic-art">Topic &nbsp;&nbsp;</label>
+        <select name="" id="topic-art">
+          <option selected>Select topic</option>
+          <option value="1">Workout</option>
+          <option value="2">Nutrition</option>
+        </select>
+        <br>
+        
+        <label for="caption-art">Caption</label>
+        <div class="form-group">
+          <input type="text" class="form-control" id="caption-art" placeholder="Enter article's caption">
+        </div>
+
+        <label for="content-art">Content</label>
+        <div class="form-group">
+          <textarea class="form-control" id="content-art" rows="7" placeholder="Enter article's content"></textarea>
+        </div>
+
+        <div class="iot">
+            <button type="submit" class="btn btn-primary" onclick="haha()"><i class="fas fa-plus-circle">&nbsp;&nbsp;POST</i></button>
+            <button type="submit" class="btn btn-success" onclick="hehe()"><i class="fas fa-dollar-sign">&nbsp;&nbsp;PAY</i></button>
+        </div>
+      </form>
+   </div>
+</div>
+<script>
+    function hehe()
+    {
+        var str='<button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle">&nbsp;&nbsp;POST</i></button><button type="submit" class="btn btn-success" disabled><i class="fas fa-dollar-sign">&nbsp;&nbsp;PAY</i></button>';
+        document.getElementsByClassName('iot')[0].innerHTML = str;
+        window.alert('  Trả tiền thành công!');
+    }
+    function haha()
+    {
+        var str = document.getElementsByClassName('iot').innerHTML;
+        if (str == '<button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle">&nbsp;&nbsp;POST</i></button><button type="submit" class="btn btn-success" disabled><i class="fas fa-dollar-sign">&nbsp;&nbsp;PAY</i></button>')
+        {
+            alert('  Đăng bài thành công!');
+        }
+        else 
+        {
+            alert('  Bạn chưa trả tiền để đăng bài!');
+        }
+    }
+</script>
