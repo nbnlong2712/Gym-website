@@ -1,3 +1,41 @@
+{{#section 'js'}}
+   <script >
+     $(document).ready(function() 
+     {
+    $("#myCarousel").on("slide.bs.carousel", function(e)
+     {
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 4;
+            var totalItems = $(".carousel-item").length;
+        
+            if (idx >= totalItems - (itemsPerSlide - 1))
+             {
+                      var it = itemsPerSlide - (totalItems - idx);
+                      for (var i = 0; i <script it; i++)
+                       {
+                                  // append slides to end
+                                  if (e.direction == "left") 
+                                  {
+                                                $(".carousel-item")
+                                                            .eq(i)
+                                                            .appendTo(".carousel-inner");
+                                  } else 
+                                  {
+                                                $(".carousel-item")
+                                                            .eq(0)
+                                                            .appendTo($(this).find(".carousel-inner"));
+                                  }
+                      }
+            }
+    })
+  })
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script
+{{/section}}
+ 
+
 <div class="container2">
    	<h1 class="text-center mt-5 mb-5">
    		List  Course
@@ -5,102 +43,37 @@
    	
    	<div id="myCarousel" class="carousel slide" data-ride="carousel">
    		<div class="carousel-inner row w-100 mx-auto">
+
    			<div class="carousel-item col-md-3 active">
    				<div class="card">
    					<img class="card-img-top img-fluid" src="images/c172.jpg" width="100%" alt="card-img">
    					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
+   						<h4 class="card-title">{{first.Cou_name}}</h4>
 						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
+   						<p class="card-text">{{first.Cou_des}}</p>
+						<h5> {{first.Cou_price}}</h5>
    						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
    					</div>
    				</div>
    			</div>
    			
-   			
-   			<div class="carousel-item col-md-3">
+   			{{#each list}}
+			   	<div class="carousel-item col-md-3">
    				<div class="card">
    					<img class="card-img-top img-fluid" src="images/c31.jpg"width="100%" alt="card-img">
    					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
+   						<h4 class="card-title">{{Cou_name}}</h4>
 						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
+   						<p class="card-text">{{Cou_des}}</p>
+						<h5> {{Cou_price}}</h5>
    						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
    					</div>
    				</div>
    			</div>
+			{{/each}}
    			
    			
-   			<div class="carousel-item col-md-3">
-   				<div class="card">
-   					<img class="card-img-top img-fluid" src="images/c41.jpg"width="100%" alt="card-img">
-   					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
-						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
-   						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
-   					</div>
-   				</div>
-   			</div>
    			
-   			
-   			<div class="carousel-item col-md-3">
-   				<div class="card">
-   					<img class="card-img-top img-fluid" src="images/s62.jpg"width="100%" alt="card-img">
-   					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
-						 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
-   						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
-   					</div>
-   				</div>
-   			</div>
-   			
-   			
-   			<div class="carousel-item col-md-3">
-   				<div class="card">
-   					<img class="card-img-top img-fluid" src="images/s72.jpg"width="100%" alt="card-img">
-   					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
-						 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
-   						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
-   					</div>
-   				</div>
-   			</div>
-   			
-   			
-   			<div class="carousel-item col-md-3">
-   				<div class="card">
-   					<img class="card-img-top img-fluid" src="images/s83.jpg"width="100%" alt="card-img">
-   					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
-						 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
-   						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
-   					</div>
-   				</div>
-   			</div>
-   			
-   			
-   			<div class="carousel-item col-md-3">
-   				<div class="card">
-   					<img class="card-img-top img-fluid" src="images/c94.jpg"width="100%" alt="card-img">
-   					<div class="card-body">
-   						<h4 class="card-title">Name</h4>
-						 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-   						<p class="card-text">Mô tả của khóa học</p>
-						<h5> $400</h5>
-   						<a class="btn btn-lg btn-info text-light text-capitalize">add to cart</a>
-   					</div>
-   				</div>
-   			</div>
    			
    			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
