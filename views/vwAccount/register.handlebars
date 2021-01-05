@@ -1,9 +1,30 @@
+{{#section 'js'}}
+<script>
+ $('#frmRegister').on('submit', function (e) {
+
+    const username = $('#txtUsername').val();
+    console.log(username);
+    if (username.length === 0) {
+      alert('Invalid data');
+      return;
+    }
+    $.getJSON(`/account/is-available?user=${username}`, function (data) {
+      if (data === true) {
+         $('#frmRegister').off('submit').submit();
+      } else {
+        alert('Tên Tài khoản đã có người dùng , vui lòng đăng ký lại');
+      }
+    })
+  });
+
+</script>
+{{/section }}
 <div class="box">
        <h1>Register</h1>
-       <form method="POST">
+       <form id="frmRegister" method="POST" action="">
            <div class="inputBox">
                <label> <i class="fa fa-user" aria-hidden="true"></i> </label>
-               <input class="fill" type="text" placeholder="Username" name="username" required="">
+               <input class="fill"  id="txtUsername" type="text" placeholder="Username" name="username" autofocus>
            </div>
            <div class="inputBox">
                <label><i class="fa fa-lock" aria-hidden="true"></i></label>
@@ -14,7 +35,7 @@
             <input class="fill" type="email" placeholder="Gmail" name="email" required="">
         </div>
            <div>
-               <input class="lg" type="submit"  name="" value="Sign up">
+                 <input class="lg" type="submit"  name="" value="Sign up">
            </div>
        </form>
    </div>

@@ -1,23 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
-const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
 require('express-async-errors');
 const app = express();
 
 app.use(morgan('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.engine('handlebars', exphbs({
-  defaultLayout: 'home.handlebars'
-}));
-app.set('view engine', 'handlebars');
-app.get('/', function (req, res) {
-  res.render('home');
-});
+app.use(express.urlencoded({
+   extended: true 
+  }));
 app.use(express.static('public'));
-
-app.use('/login/', require('./controllers/login.router'));
 app.use('/shopequipments/', require('./controllers/shopEquipments.router'))
 app.use('/shopCourses/', require('./controllers/shopCourses.router'))
 app.use('/scheduler/', require('./controllers/scheduler.router'));
@@ -34,8 +24,12 @@ app.use('/workoutArticle/', require('./controllers/workoutArticle.router'));
 app.use('/adv/', require('./controllers/adv.router'));
 app.use('/postAdv/', require('./controllers/postAdv.router'));
 app.use('/postArticle/', require('./controllers/postArticle.router'));
-require('./middlewares/view.mdw')(app);
+
+require('./middlewares/session.mdw')(app);
+require('./middlewares/locals.mdw')(app);
 require('./middlewares/routes.mdw')(app);
+require('./middlewares/view.mdw')(app);
+
 app.get('/err', function(req,res) {
   throw new  Error('Error!');
   
