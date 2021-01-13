@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
-                            <a href="index-2.html">
+                            <a href="/">
                                 <img src="/images/Logo1.png" alt="Logo" width="50%">
                             </a>
                         </div>
@@ -83,7 +83,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-2.html">Home</a>
+                                        <a class="active" href="/">Home</a>
                                         
                                     </li>
                                    
@@ -126,7 +126,7 @@
                         <h2>Our Courses</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Courses</li>
                             </ol>
                         </nav>
@@ -164,6 +164,9 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                     <div class="row">
+                         <form id="frmAddItem" action="/mycourses/add" method="POST">
+                        <input type="hidden" id="txtProId" name="id">
+                        </form>
                          {{#each this.Courses}}
                         <div class="col-lg-4 col-md-6">
                             <div class="singel-course mt-30">
@@ -194,7 +197,7 @@
                                         </div>
                                         <div class="admin">
                                             <ul>
-                                                <a href="/shop/detail/{{Cou_ID}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                                <a href="/course/detail/{{Cou_ID}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
                                                 <a href="https://google.com" class="btn btn-primary"><i class="far fa-heart"></i></a>
                                                 <a data-id="{{Cou_ID}}" class="btn btn-primary addItem"   href="javascript:;" role="button"><i class="fas fa-shopping-cart"></i></a>
                                             </ul>
@@ -269,6 +272,13 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="/js/map-script.js"></script>
+    <script>
+  $('.addItem').on('click', function () {
+    const id = $(this).data('id');
+    $('#txtProId').val(id);
+    $('#frmAddItem').submit();
+  })
+</script>
 
 </body>
 

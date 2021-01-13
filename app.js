@@ -21,9 +21,6 @@ app.use('/adv/', require('./controllers/adv.router'));
 app.use('/postAdv/', require('./controllers/postAdv.router'));
 app.use('/postArticle/', require('./controllers/postArticle.router'));
 
-
-
-
 require('./middlewares/session.mdw')(app);
 require('./middlewares/locals.mdw')(app);
 require('./middlewares/routes.mdw')(app);
