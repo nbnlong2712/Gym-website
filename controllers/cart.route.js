@@ -17,6 +17,7 @@ router.get('/', async function (req, res) {
          })
     
      }
+     console.log(item[0].amount);
     res.render('vwCart/index',{item})
     
 })

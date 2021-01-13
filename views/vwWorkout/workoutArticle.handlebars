@@ -1,0 +1,23 @@
+<style>
+  img{
+    height: 70px;
+    width: 130px;
+  }
+  a{
+    color: beige;
+  }
+</style>
+<div class="container4">
+  <h2>Workout article</h2>
+  
+    <div class="col-md-12">
+    {{#each this.articles}}
+      <div >
+        <div class="overlay">
+          <a href="/workoutArticle/content/{{Ar_ID}}">&nbsp;&nbsp;<img src="/images/A{{Ar_ID}}.jpg">&nbsp;&nbsp;&nbsp;{{Ar_ID}}. {{Ar_caption}}</i></a>
+        </div>
+        <br>
+      </div>
+      {{/each}}
+    </div>
+  </div>

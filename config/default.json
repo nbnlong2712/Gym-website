@@ -3,7 +3,7 @@
       "host": "localhost",
       "port": 3306,
       "user": "root",
-      "password": "0801",
+      "password": "NKIfsrgfam55",
       "database": "gymweb",
       "waitForConnections": true,
       "connectionLimit": 50,
