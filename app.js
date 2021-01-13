@@ -10,7 +10,6 @@ app.use(express.urlencoded({
 app.use(express.static('public'));
 app.use('/scheduler/', require('./controllers/scheduler.router'));
 app.use('/menu/', require('./controllers/menu.router'));
-app.use('/nutrionArticle/', require('./controllers/nutrionArticle.router'));
 app.use('/muscle/', require('./controllers/muscle.router'));
 app.use('/abs/', require('./controllers/abs.router'));
 app.use('/chest/', require('./controllers/chest.router'));
@@ -18,10 +17,12 @@ app.use('/arms/', require('./controllers/arms.router'));
 app.use('/legs/', require('./controllers/legs.router'));
 app.use('/head/', require('./controllers/head.router'));
 app.use('/cardio/', require('./controllers/cardio.router'));
-app.use('/workoutArticle/', require('./controllers/workoutArticle.router'));
 app.use('/adv/', require('./controllers/adv.router'));
 app.use('/postAdv/', require('./controllers/postAdv.router'));
 app.use('/postArticle/', require('./controllers/postArticle.router'));
+
+
+
 
 require('./middlewares/session.mdw')(app);
 require('./middlewares/locals.mdw')(app);

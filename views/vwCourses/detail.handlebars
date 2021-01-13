@@ -12,11 +12,12 @@
     <p class="card-text">{{Cou_des}}
     </p>
     {{#if ../auth}}
-    <form action="/mycourses/add" method="POST">
+    <form action="/cart/add" method="POST">
       <div class="row form-group">
         <div class="col-sm-4">
           <div class="input-group">
             <input type="hidden" value="{{Cou_ID}}" name="id">
+            <input type="text" class="form-control" name="quantity" placeholder="Quantity" value="1">
             <div class="input-group-append">
               <button class="btn btn-outline-primary" type="submit">
                 <i class="fa fa-plus" aria-hidden="true"></i>
