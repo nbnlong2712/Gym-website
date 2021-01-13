@@ -8,8 +8,6 @@ app.use(express.urlencoded({
    extended: true 
   }));
 app.use(express.static('public'));
-app.use('/shopequipments/', require('./controllers/shopEquipments.router'))
-app.use('/shopCourses/', require('./controllers/shopCourses.router'))
 app.use('/scheduler/', require('./controllers/scheduler.router'));
 app.use('/menu/', require('./controllers/menu.router'));
 app.use('/nutrionArticle/', require('./controllers/nutrionArticle.router'));

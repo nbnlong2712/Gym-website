@@ -1,0 +1,37 @@
+
+<div class="container1">
+  {{#with Courses}}
+<div class="card">
+  <h4 class="card-header">
+  {{Cou_name}}
+  </h4>
+  <div class="card-body">
+    <img src="/images/E{{Cou_ID}}.png" width="50%" alt="">
+
+    <p class="card-text mt-3">Giá bán:{{Cou_price}} <span class="text-danger font-weight-bold"></span></p>
+    <p class="card-text">{{Cou_des}}
+    </p>
+    {{#if ../auth}}
+    <form action="/cart/add" method="POST">
+      <div class="row form-group">
+        <div class="col-sm-4">
+          <div class="input-group">
+            <input type="hidden" value="{{Cou_ID}}" name="id">
+            <input type="text" class="form-control" name="quantity" placeholder="Quantity" value="1">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="submit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    {{/if}}
+  </div>
+  <div class="card-footer text-muted">
+    <small>Last upadated 3 minutes ago.</small>
+  </div>
+</div>
+{{/with}}
+</div>

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>HTNL fitness</title>
   <link rel="stylesheet" href="/css/styles.css">
-  
+ {{{_sections.css}}}
 </head>
 <body>
 <div class="wrapper">
@@ -25,6 +25,12 @@
         <form id="frmLogout" action="/account/logout" method="POST" ></form>
         <ul >	
          {{#if auth}}
+          <li class="nav-item">
+          <a class="nav-link" href="/cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Shopping cart {{cartSummary}} item(s);
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -119,10 +125,10 @@
                 <div class="submenu">
                   <ul>
                     <li>
-                      <a href="/shopCourses"><i class="fab fa-leanpub">&nbsp;Coures</i></a>
+                      <a href="/course/buycourse"><i class="fab fa-leanpub">&nbsp;Coures</i></a>
                     </li>
                     <li>
-                      <a href="/shopequipments"><i class="fas fa-tools">&nbsp;Supplement</i></a>
+                      <a href="/shop/bySupplement"><i class="fas fa-tools">&nbsp;Supplement</i></a>
                     </li>
                   </ul>
                 </div>

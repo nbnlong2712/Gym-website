@@ -1,0 +1,69 @@
+
+{{#section 'js'}}
+<script>
+  $('.removeItem').on('click', function () {
+    const id = $(this).data('id');
+    $('#txtProId').val(id);
+    $('#frmRemoveItem').submit();
+  })
+</script>
+{{/section}}
+<div class="container1">
+<div class="card">
+  <div class="card-header">
+    <h4>Your Shopping Cart</h4>
+  </div>
+  <div class="card-body">
+    {{#if this.empty}}
+    <h5 class="card-title">Không có dữ liệu!</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    {{else}}
+    <form id="frmRemoveItem" action="/cart/remove" method="POST">
+      <input type="hidden" id="txtProId" name="id">
+    </form>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this.item}}
+        <tr>
+          <td>
+           <img src="/images/E{{product.Sup_ID}}.png" width="15%">
+            <a href="/products/detail/{{product.Sup_ID}}">
+              {{product.Sup_name}}
+            </a>
+          </td>
+          <td>{{ product.Sup_price}}</td>
+          <td>{{quantity}}</td>
+          <td>{{ amount}}</td>
+          <td class="text-right">
+            <a data-id="{{product.Sup_ID}}" class="btn btn-sm btn-outline-danger removeItem" title="Remove Item"
+              href="javascript:;" role="button">
+            <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{/if}}
+  </div>
+  {{#unless this.empty}}
+  <div class="card-footer">
+    <form action="/cart/checkout" method="POST">
+      <button type="submit" class="btn btn-outline-success float-right">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Check Out
+      </button>
+    </form>
+  </div>
+  {{/unless}}
+</div>
+</div>
