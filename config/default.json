@@ -1,9 +1,9 @@
 {
     "mysql": {
-      "host": "localhost",
+      "host": "127.0.0.1",
       "port": 3306,
       "user": "root",
-      "password": "0801",
+      "password": "123123",
       "database": "gymweb",
       "waitForConnections": true,
       "connectionLimit": 50,
